@@ -7,5 +7,8 @@ const heroName = [
 
 
 
-const randomElement = heroName[Math.floor(Math.random() * heroName.length)];
-console.log(randomElement)
+const randomHero = heroName[Math.floor(Math.random() * heroName.length)];
+
+
+document.getElementById("hero").src = "images/" + randomHero + ".png";
+
