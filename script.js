@@ -141,7 +141,7 @@ var images = [{
     used : false
 },
 {
-    text : "Torbjorm",
+    text : "Torbjorn",
     image : "images/Torbjorn.png",
     used : false
 },
@@ -175,7 +175,7 @@ var images = [{
 var counter = 0; var randomIndex=0; 
  
 
-var displayImages=34; 
+var displayImages=24; 
  if(displayImages >= 5 && displayImages <= 34){
 while(counter !== displayImages){ 
 	randomIndex = Math.floor(Math.random()*images.length); 
@@ -185,9 +185,15 @@ while(counter !== displayImages){
 		var container = document.getElementById("image-container");
         var img = document.createElement('img');
         img.src = images[randomIndex]["image"];
-        img.style = "border:3px solid orange; border-radius:50px; width:100px";
+        img.style = "border:3px solid orange; border-radius:50px; width:100px; margin:5px";
         container.appendChild(img);
-        console.log(images)
+        console.log(images);
+
+        var names = document.getElementById("name-container");
+        var button = document.createElement('button');
+        button.innerHTML = images[randomIndex]["text"];
+        button.style = "border:3px solid orange; border-radius:14px; width:120px; height:50px; margin:5px";
+        names.appendChild(button);
 		 
  
 		counter++; 
