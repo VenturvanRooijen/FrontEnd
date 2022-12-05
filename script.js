@@ -175,8 +175,10 @@ var images = [{
 var counter = 0; var randomIndex=0; 
  
 
-var displayImages=24; 
+var displayImages=34; 
+
  if(displayImages >= 5 && displayImages <= 34){
+
 while(counter !== displayImages){ 
 	randomIndex = Math.floor(Math.random()*images.length); 
 	if(images[randomIndex]["used"] === false){ 
@@ -201,6 +203,6 @@ while(counter !== displayImages){
 } 
 
 } else{
-    document.getElementById("teVeel").textContent += "Aantal heroes moet tussen de 5 en 34 zijn";
-    document.getElementById("teVeel").style = "display: block;"
+    document.getElementById("invalidAmount").textContent += "Aantal heroes moet tussen de 5 en 34 zijn";
+    document.getElementById("invalidAmount").style = "display: block;"
 };
