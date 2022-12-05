@@ -52,7 +52,7 @@ var images = [{
 },
 {
     text : "Hanzo",
-    image : "images/Ana.png",
+    image : "images/Hanzo.png",
     used : false
 },
 {
