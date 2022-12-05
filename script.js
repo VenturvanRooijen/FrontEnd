@@ -188,6 +188,8 @@ while(counter !== displayImages){
         var img = document.createElement('img');
         img.src = images[randomIndex]["image"];
         img.style = "border:3px solid orange; border-radius:50px; width:100px; margin:5px";
+        img.id = counter;
+        img.addEventListener("click", answer(img.id));
         container.appendChild(img);
         console.log(images);
 
@@ -195,9 +197,12 @@ while(counter !== displayImages){
         var button = document.createElement('button');
         button.innerHTML = images[randomIndex]["text"];
         button.style = "border:3px solid orange; border-radius:14px; width:120px; height:50px; margin:5px";
+        button.id = counter;
+        button.addEventListener("click", answer(button.id));
         names.appendChild(button);
-		 
- 
+
+        
+
 		counter++; 
 	} 
 } 
@@ -206,3 +211,8 @@ while(counter !== displayImages){
     document.getElementById("invalidAmount").textContent += "Aantal heroes moet tussen de 5 en 34 zijn";
     document.getElementById("invalidAmount").style = "display: block;"
 };
+
+
+function answer() {
+    console.log(counter)
+}
